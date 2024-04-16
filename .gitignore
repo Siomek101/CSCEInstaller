@@ -1,3 +1,21 @@
 
 obj/Debug/CSCEInstaller.pdb
 *.vsidx
+.vs/CSCEInstaller/v17/.suo
+bin/Debug/7z.dll
+bin/Debug/7z.exe
+bin/Debug/archive.7z
+bin/Debug/CSCEInstaller.exe
+bin/Debug/CSCEInstaller.exe.config
+bin/Debug/CSCEInstaller.pdb
+obj/Debug/.NETFramework,Version=v4.8.AssemblyAttributes.cs
+obj/Debug/CSCEInstaller.csproj.AssemblyReference.cache
+obj/Debug/CSCEInstaller.csproj.CoreCompileInputs.cache
+obj/Debug/CSCEInstaller.csproj.FileListAbsolute.txt
+obj/Debug/CSCEInstaller.csproj.GenerateResource.cache
+obj/Debug/CSCEInstaller.exe
+obj/Debug/CSCEInstaller.Form1.resources
+obj/Debug/CSCEInstaller.Properties.Resources.resources
+obj/Debug/DesignTimeResolveAssemblyReferences.cache
+obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+obj/Debug/TempPE/Properties.Resources.Designer.cs.dll
