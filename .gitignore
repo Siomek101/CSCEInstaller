@@ -19,3 +19,5 @@ obj/Debug/CSCEInstaller.Properties.Resources.resources
 obj/Debug/DesignTimeResolveAssemblyReferences.cache
 obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 obj/Debug/TempPE/Properties.Resources.Designer.cs.dll
+obj/Debug/CSCEInstaller.csproj.CopyComplete
+bin/upx.exe
