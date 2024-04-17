@@ -14,6 +14,8 @@ Standalone version is comming soon.
 
 I had some problems with Git LFS. I needed to make the repo private.
 
+UPDATE: The repo is now public. https://github.com/Siomek101/counter-strike-community-edition
+
 > Discord server?
 
 https://discord.gg/BQYpsfaEBZ
