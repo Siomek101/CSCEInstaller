@@ -41,14 +41,15 @@
             this.LogTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.InstallSettingsPanel = new System.Windows.Forms.Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.bytesLabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.FinishLabel = new System.Windows.Forms.Label();
             this.FinishExitButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.bytesLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.downloadProgress = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -166,6 +167,7 @@
             // 
             // InstallSettingsPanel
             // 
+            this.InstallSettingsPanel.Controls.Add(this.downloadProgress);
             this.InstallSettingsPanel.Controls.Add(this.bytesLabel);
             this.InstallSettingsPanel.Controls.Add(this.label6);
             this.InstallSettingsPanel.Controls.Add(this.button1);
@@ -177,16 +179,13 @@
             this.InstallSettingsPanel.TabIndex = 5;
             this.InstallSettingsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.InstallSettingsPanel_Paint);
             // 
-            // linkLabel1
+            // bytesLabel
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(12, 241);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(38, 13);
-            this.linkLabel1.TabIndex = 10;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Github";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.bytesLabel.AutoSize = true;
+            this.bytesLabel.Location = new System.Drawing.Point(6, 195);
+            this.bytesLabel.Name = "bytesLabel";
+            this.bytesLabel.Size = new System.Drawing.Size(0, 13);
+            this.bytesLabel.TabIndex = 11;
             // 
             // label6
             // 
@@ -198,6 +197,17 @@
             this.label6.TabIndex = 9;
             this.label6.Text = "Note: CS:CE needs Source SDK 2013 Multiplayer to run. It\'s FREE\r\nto download on s" +
     "team. Standalone version is coming soon.\r\n";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(12, 241);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(38, 13);
+            this.linkLabel1.TabIndex = 10;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Github";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // FinishLabel
             // 
@@ -241,14 +251,6 @@
             this.label5.Text = "With help of [fill]";
             this.label5.Visible = false;
             // 
-            // bytesLabel
-            // 
-            this.bytesLabel.AutoSize = true;
-            this.bytesLabel.Location = new System.Drawing.Point(6, 195);
-            this.bytesLabel.Name = "bytesLabel";
-            this.bytesLabel.Size = new System.Drawing.Size(0, 13);
-            this.bytesLabel.TabIndex = 11;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -257,6 +259,16 @@
             this.label7.Size = new System.Drawing.Size(57, 13);
             this.label7.TabIndex = 12;
             this.label7.Text = "Version: ...";
+            // 
+            // downloadProgress
+            // 
+            this.downloadProgress.Location = new System.Drawing.Point(9, 154);
+            this.downloadProgress.Name = "downloadProgress";
+            this.downloadProgress.Size = new System.Drawing.Size(405, 23);
+            this.downloadProgress.Step = 1;
+            this.downloadProgress.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.downloadProgress.TabIndex = 13;
+            this.downloadProgress.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // Form1
             // 
@@ -312,6 +324,7 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label bytesLabel;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ProgressBar downloadProgress;
     }
 }
 

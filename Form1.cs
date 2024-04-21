@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -154,7 +155,8 @@ namespace CSCEInstaller
             {
                 client.DownloadProgressChanged += (a,b) =>
                 {
-                    bytesLabel.Text = $"{b.BytesReceived}/{b.TotalBytesToReceive} bytes";
+                    bytesLabel.Text = $"{(b.BytesReceived) / 1000}/{(b.TotalBytesToReceive) / 1000} KB {b.ProgressPercentage}%";
+                    downloadProgress.Value = b.ProgressPercentage;
                 };
                 client.DownloadFileCompleted += (a, b) =>
                 {
@@ -164,14 +166,22 @@ namespace CSCEInstaller
                         LogBox(b.Error.Message);
                         return;
                     }
+
                     LogBox("Extracting files using 7-zip...");
+
+
                     var sevenzipArgs = $"x \"{tempFilename}\" -y -o{installPath}";
-                    Process.Start("7z.exe", sevenzipArgs).WaitForExit();
+                    Process.Start("7z.exe", sevenzipArgs).Start();
+
+                    LogBox($"Deleting temp file");
+                    File.Delete(tempFilename);
 
                     LogBox("Done!");
                     InstallSettingsPanel.Visible = false;
                     FinishLabel.Visible = true;
                     FinishExitButton.Visible = true;
+
+
                 };
                 client.DownloadFileAsync(new Uri(BrowserDownloadUrl), tempFilename);
             }
@@ -190,6 +200,11 @@ namespace CSCEInstaller
         }
 
         private void InstallSettingsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
         {
 
         }
