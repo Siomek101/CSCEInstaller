@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ver2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ver2.Designer.cs">
+      <DependentUpon>ver2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ver2.resx">
+      <DependentUpon>ver2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -86,6 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icon_huge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
