@@ -177,9 +177,8 @@ namespace CSCEInstaller
 
                     LogBox("Extracting files using 7-zip...");
 
-
-                    var sevenzipArgs = $"/c abc.bat x \"{tempFilename}\" -y -o{installPath}";
-                    Process.Start("cmd.exe", sevenzipArgs).WaitForExit();
+                    var sevenzipArgs = $"x \"{tempFilename}\" -y -o{installPath}";
+                    Process.Start("7z.exe", sevenzipArgs).WaitForExit();
 
                     LogBox($"Deleting temp file");
                     File.Delete(tempFilename);
